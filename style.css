@@ -120,6 +120,10 @@ img {
   transform: rotateY(180deg);
 }
 
+#start-page:hover,
+#game-over:hover {
+  cursor: pointer;
+}
 .hint {
   display: none;
 }
