@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap"
+      rel="stylesheet"
+    />
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div id="start-page" class="overlay visible">START</div>
+    <div id="game-over" class="overlay">GAME OVER</div>
+    <section id="dashboard">
+      <h1>Memory Game</h1>
+      <p>Lowest Streak: <span id="lowest-streak"></span></p>
+      <p>Current Streak: <span id="streak">0</span></p>
+    </section>
+    <section id="game-page">
+      <div id="game-board">
+        <div data-name="pasta" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">1</span></div>
+            <div class="card-back">
+              <img src="gifs/pasta.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="burger" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">2</span></div>
+            <div class="card-back">
+              <img src="gifs/burger.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="doughnut" class="card">
+          <div class="card-inner ">
+            <div class="card-front"><span class="hint">3</span></div>
+            <div class="card-back">
+              <img src="gifs/doughnut.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="kebab" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">4</span></div>
+            <div class="card-back">
+              <img src="gifs/kebab.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="sushi" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">5</span></div>
+            <div class="card-back">
+              <img src="gifs/sushi.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="icecream" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">6</span></div>
+            <div class="card-back">
+              <img src="gifs/icecream.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="soup" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">7</span></div>
+            <div class="card-back">
+              <img src="gifs/soup.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="pizza" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">8</span></div>
+            <div class="card-back">
+              <img src="gifs/pizza.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="steak" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">9</span></div>
+            <div class="card-back">
+              <img src="gifs/steak.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="salad" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">10</span></div>
+            <div class="card-back">
+              <img src="gifs/salad.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="eggs" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">11</span></div>
+            <div class="card-back">
+              <img src="gifs/eggs.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="cake" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">12</span></div>
+            <div class="card-back">
+              <img src="gifs/cake.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="pasta" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">1</span></div>
+            <div class="card-back">
+              <img src="gifs/pasta.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="burger" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">2</span></div>
+            <div class="card-back">
+              <img src="gifs/burger.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="doughnut" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">3</span></div>
+            <div class="card-back">
+              <img src="gifs/doughnut.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="kebab" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">4</span></div>
+            <div class="card-back">
+              <img src="gifs/kebab.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="sushi" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">5</span></div>
+            <div class="card-back">
+              <img src="gifs/sushi.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="icecream" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">6</span></div>
+            <div class="card-back">
+              <img src="gifs/icecream.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="soup" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">7</span></div>
+            <div class="card-back">
+              <img src="gifs/soup.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="pizza" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">8</span></div>
+            <div class="card-back">
+              <img src="gifs/pizza.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="steak" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">9</span></div>
+            <div class="card-back">
+              <img src="gifs/steak.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="salad" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">10</span></div>
+            <div class="card-back">
+              <img src="gifs/salad.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="eggs" class="card">
+          <div class="card-inner">
+            <div class="card-front"><span class="hint">11</span></div>
+            <div class="card-back">
+              <img src="gifs/eggs.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+        <div data-name="cake" class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="hint">12<span class="hint"></span></span>
+            </div>
+            <div class="card-back">
+              <img src="gifs/cake.gif" alt="back" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

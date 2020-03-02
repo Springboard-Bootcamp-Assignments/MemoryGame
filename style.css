@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #cfd9df;
+  font-family: "Trade Winds";
+}
+
+/* Game board */
+#game-page {
+  width: 100hv;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+/* Dashboard */
+
+#dashboard {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Game Over */
+.overlay {
+  display: none;
+  position: fixed;
+  color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.visible {
+  display: flex;
+  animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 2rem;
+  }
+}
+
+/* Container to create game board */
+#game-board {
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 0.5rem;
+  perspective: 1000px;
+}
+
+/* The flip card container */
+.card {
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+.card:active {
+  transform: scale(0.95);
+}
+
+/* This container is needed to position the front and back side */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Position the front and back side */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side*/
+.card-front {
+  background-color: teal;
+  color: black;
+  border-radius: 20px;
+}
+
+/* Style the back side */
+.card-back {
+  transform: rotateY(180deg);
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+
+/* Do an horizontal flip */
+.flip {
+  transform: rotateY(180deg);
+}
+
+.hint {
+  display: none;
+}
