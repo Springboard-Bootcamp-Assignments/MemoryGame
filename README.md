@@ -1,3 +1,3 @@
 # MemoryGame
 
-https://ryikeda.github.io/MemoryGame/
+https://springboard-bootcamp-assignments.github.io/MemeGenerator/
