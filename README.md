@@ -1,3 +1,3 @@
 # MemoryGame
 
-https://springboard-bootcamp-assignments.github.io/MemeGenerator/
+https://springboard-bootcamp-assignments.github.io/MemoryGame/
